@@ -41,7 +41,7 @@ downloading_and_unzip_files() {
 
 nodejs_setup() {
     # instaling nodejs
-    dnf module disabel nodejs -y
+    dnf module disable nodejs -y
     dnf module enable nodejs:20 -y
     dnf install nodejs -y
     adding_user_and_directory
