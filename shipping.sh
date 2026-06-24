@@ -3,11 +3,11 @@ source common.sh
 #install maven which is java packaging software
 dnf install maven -y
 # adding user
-creating_User_And_Directory
+adding_user_and_directory
 # shipping as daemon
-component_As_Service
+component_as_service
 # shipping data
-downloading_And_Setting_data
+downloading_and_unzip_files
 # to load schema we need mysql client
 #installing & setting-up mysql-clent
 dnf install mysql -y 
