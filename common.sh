@@ -113,5 +113,5 @@ maven_setup() {
 }
 
 print_head() {
-    echo -e "\e34m$*\e0m"
+    echo -e "\e[34m$*\e[0m"
 }
