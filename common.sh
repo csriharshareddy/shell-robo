@@ -27,7 +27,7 @@ nginx_setup() {
     print_head extracting data
     unzip /tmp/$component.zip
     print_head restarting nginx
-    system enable nginx && systemctl restart nginx   
+    systemctl enable nginx && systemctl restart nginx   
     }
 
 adding_user_and_directory() {
