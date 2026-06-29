@@ -14,5 +14,5 @@ exit_status_pirnt $?
 nodejs_setup
 #data into mongodb 
 print_head Load Master Data
-mongosh --host MONGODB-SERVER-IPADDRESS </app/db/master-data.js >> $log_file 
+mongosh --host mongodb-dev.mydevopsproject.online </app/db/master-data.js >> $log_file 
 exit_status_pirnt $?
