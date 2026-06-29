@@ -69,9 +69,11 @@ nginx_setup() {
 adding_user_and_directory() {
     # adding user 
     print_head Creating user for app
-    useradd roboshop >> $log_file
+    id roboshop >> $log_file
+    if [ $? -ne 0 ]; then
+        useradd roboshop >> $log_file
+    fi
     exit_status_pirnt $?
-
 
     # creating a directory for app
     print_head Creating directory /app
@@ -229,6 +231,10 @@ exit_status_pirnt() {
         echo -e "\e[32m  >> Exicuted\e[0m"
     else
         echo -e "\e[31m  >> error\e[0m"
+        line_number=(cat -n $log_file | grep '************************************' | tail -n 2 | head -n 1 | awk '{print $1}')
+        echo
+        echo
+        sed -n -e "$line_number,$ p" $log_file 
         exit 1
     fi
 }
