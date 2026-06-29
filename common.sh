@@ -76,6 +76,10 @@ adding_user_and_directory() {
     exit_status_pirnt $?
 
     # creating a directory for app
+    print_head deleteing existing code
+    rm -rf /app
+    exit_status_pirnt $?
+
     print_head Creating directory /app
     mkdir /app >> $log_file
     exit_status_pirnt $?
