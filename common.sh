@@ -231,7 +231,7 @@ exit_status_pirnt() {
         echo -e "\e[32m  >> Exicuted\e[0m"
     else
         echo -e "\e[31m  >> error\e[0m"
-        line_number=(cat -n /tmp/roboshop.log | grep "************************************" | tail -n 2 | head -n 1 | awk '{print $1}')
+        line_number=$(cat -n /tmp/roboshop.log | grep '************************************' | tail -n 2 | head -n 1 | awk '{print $1}')
         echo
         echo
         sed -n -e "$line_number,$ p" $log_file 
