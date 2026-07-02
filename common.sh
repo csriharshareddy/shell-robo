@@ -1,4 +1,5 @@
 log_file=/tmp/roboshop.log
+path=$(pwd)
 
 # removing old log file
 rm -f $log_file

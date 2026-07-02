@@ -3,7 +3,7 @@ source common.sh
 # installing rabbitmq-server via there repo 
 print_head Creating RabbitMQ repo file
 pwd
-cp rabbitmq.repo /etc/yum.repo.d/rabbitmq.repo >> $log_file
+cp $path/rabbitmq.repo /etc/yum.repo.d/rabbitmq.repo >> $log_file
 exit_status_pirnt $?
 
 print_head Installing RabbitMQ
