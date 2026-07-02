@@ -15,7 +15,7 @@ exit_status_pirnt $?
 
 # setup redis.conf
 print_head Setting up Redis configuration
-sed -i -e 'S/127.0.0.1/0.0.0.0/' -e '/protected-mode/ c protected-mode no' /etc/redis/redis.conf >> $log_file
+sed -i -e 's/127.0.0.1/0.0.0.0/' -e '/protected-mode/ c protected-mode no' /etc/redis/redis.conf >> $log_file
 exit_status_pirnt $?
 
 # enableing and restarting redis
