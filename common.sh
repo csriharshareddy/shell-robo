@@ -178,7 +178,8 @@ python_setup() {
 golang_setup() {
     #installing golang
     print_head Installing golang
-    dnf install golang -y
+    dnf install golang -y>> $log_file
+    exit_status_pirnt $?
 
     # dispatch as daemon
     component_as_service
@@ -193,7 +194,9 @@ golang_setup() {
     print_head Installing golang dependencies
     go mod init dispatch >> $log_file
     go get  >> $log_file
-    go build >> $log_file   
+    go build >> $log_file
+    exit_status_pirnt $?
+
 }
 
 maven_setup() {
